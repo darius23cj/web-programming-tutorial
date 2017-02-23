@@ -7,5 +7,22 @@ function getRow(produs,cantitate){
         '</tr>';
 
 }
+function showList(){
+    var lista = '';
+    for (var i=0; i <shopingList.length; i++){
+        var produs = shopingList[i];
+        lista += getRow(produs.nume,produs.cantitate);
+    }
+    document.getElementsByTagName('tbody')[0].innerHTML=lista;
 
-document.getElementsByTagName('tbody')[0].innerHTML=getRow("Paine",1)+getRow("Suc",3);
+}
+
+var shopingList=[
+    {nume:'Paine', cantitate:1},
+    {nume:'Suc', cantitate:3},
+    {nume:'Mere', cantitate:20}
+];
+
+showList(shopingList);
+
+
