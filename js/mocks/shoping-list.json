@@ -1,5 +1,6 @@
 [
   {"nume":"Paine", "cantitate":1},
   {"nume":"Suc", "cantitate":3},
- {"nume":"Mere", "cantitate":20}
+ {"nume":"Mere", "cantitate":20},
+ {"nume":"Pere", "cantitate":2}
 ]
