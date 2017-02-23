@@ -7,7 +7,7 @@ function getRow(produs,cantitate){
         '</tr>';
 
 }
-function showList(){
+function showList(shopingList){
     var lista = '';
     for (var i=0; i <shopingList.length; i++){
         var produs = shopingList[i];
@@ -16,12 +16,18 @@ function showList(){
     document.getElementsByTagName('tbody')[0].innerHTML=lista;
 
 }
+$.ajax('js/mocks/shoping-list.json',{
+    success: function(shopingList){
+        console.info(shopingList);
+        showList(shopingList);
+    }
 
-var shopingList=[
-    {nume:'Paine', cantitate:1},
-    {nume:'Suc', cantitate:3},
-    {nume:'Mere', cantitate:20}
-];
+});
+
+console.debug('after ajax');
+
+
+var shopingList=[];
 
 showList(shopingList);
 
